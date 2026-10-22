@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+<title>Ⅱ. 미분 대단원 마무리 하기</title>
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<div id="viewport"><div id="stage">
+<header class="topbar">
+  <div><div class="eyebrow">2학년 2학기 미적분Ⅰ · 대단원 마무리</div><h1 id="pageTitle">Ⅱ. 미분 대단원 마무리 하기</h1></div>
+  <div class="student-mini"><span id="miniId">학번 미입력</span><span id="miniName">이름 미입력</span><span id="pageIndicator">1 / 10</span></div>
+</header>
+<nav id="dots" class="dots"></nav>
+<main id="pages">
+<section class="page active" data-title="Ⅱ. 미분 대단원 마무리 하기">
+  <div class="cover-grid">
+    <div class="hero"><div class="badge">자동채점 · Google Sheets 제출</div><h2>Ⅱ. 미분<br>대단원 마무리 하기</h2><p>최대·최소, 극값, 도함수 그래프, 부등식, 속도·가속도까지 8문항으로 점검합니다.</p><div class="warning-box"><b>주의</b> 문제를 풀고 넘기면 되돌아와서 고칠 수 없습니다.</div><div class="pill-row"><span>8문항</span><span>100점</span><span>iPad 최적화</span></div></div>
+    <div class="card info-card">
+      <h3>학생 정보</h3>
+      <label>학번<input id="studentId" inputmode="numeric" placeholder="예: 21229" /></label>
+      <label>이름<input id="studentName" placeholder="예: 김학생" /></label>
+      <button id="startBtn" class="primary">퀴즈 시작</button>
+      <p class="lock-note">각 문항에서 <b>다음 문제</b>를 누르면 답이 확정되며 이전 문항으로 돌아갈 수 없습니다.</p>
+    </div>
+    <div class="card cover-map"><h3>출제 범위</h3><div class="topic-grid"><div>① 최대·최소</div><div>② 극값</div><div>③ 도함수 그래프</div><div>④ 속도·가속도</div><div>⑤ 최댓값</div><div>⑥ 부등식</div><div>⑦ 감소 조건</div><div>⑧ 미분 활용</div></div></div>
+  </div>
+</section>
+
+<section class="page" data-title="문항 1 | 닫힌구간의 최대·최소">
+  <div class="question-layout">
+    <article class="card question-card"><div class="qtag">문항 1 · 교과서 06번 · 주관식</div><h2>닫힌구간 [0,4]에서 함수</h2><div class="formula">f(x)=x⁴−4x³−2x²+12x+a</div><p class="qtext">의 최댓값과 최솟값의 합이 11일 때, 상수 a의 값을 구하시오.</p>
+    <div class="answer-row"><span>정답</span><input id="q1" inputmode="numeric" placeholder="숫자 입력" /></div></article>
+    <aside class="card hint-card"><h3>생각 포인트</h3><p>닫힌구간에서는 <b>끝점</b>과 <b>f'(x)=0인 점</b>을 모두 비교해야 합니다.</p><div class="mini-formula">f'(x)=4(x−3)(x−1)(x+1)</div></aside>
+  </div>
+</section>
+
+<section class="page" data-title="문항 2 | 삼차함수의 극댓값">
+  <div class="question-layout"><article class="card question-card"><div class="qtag">문항 2 · 교과서 08번 · 단답형</div><h2>삼차함수 f(x)가 다음을 모두 만족시킬 때, f(x)의 극댓값을 구하시오.</h2><div class="condition">(가) lim<sub>x→0</sub> f(x)/x = −15<br>(나) 함수 f(x)가 x=1에서 극솟값 −8을 갖는다.</div><div class="answer-row"><span>정답</span><input id="q2" inputmode="decimal" placeholder="숫자 입력" /></div></article><aside class="card hint-card"><h3>생각 포인트</h3><p>극솟값 조건에서는 <b>f(1)=-8</b>과 <b>f'(1)=0</b>을 함께 이용합니다.</p></aside></div>
+</section>
+
+<section class="page" data-title="문항 3 | 도함수 그래프와 극값">
+  <div class="question-layout"><article class="card question-card"><div class="qtag">문항 3 · 교과서 10번 · 단답형</div><h2>삼차함수 y=f(x)의 도함수 y=f'(x)의 그래프가 오른쪽과 같다.</h2><p class="qtext">f(−1)=2, f(2)=−4일 때, 방정식 2f(x)−k=0이 서로 다른 두 실근을 갖도록 하는 실수 k의 값의 <b>합</b>을 구하시오.</p><div class="answer-row"><span>정답</span><input id="q3" inputmode="decimal" placeholder="숫자 입력" /></div></article><aside class="card graph-card"><canvas id="q3Canvas" width="430" height="360"></canvas><p class="small center">f'(x)는 x=−1, 2에서 0</p></aside></div>
+</section>
+
+<section class="page" data-title="문항 4 | 속도와 가속도">
+  <div class="question-layout"><article class="card question-card"><div class="qtag">문항 4 · 교과서 12번 · 복수 선택</div><h2>점 P의 시각 t에서의 위치가</h2><div class="formula">x=2t³−7t²+8t</div><p class="qtext">일 때, 옳은 것을 모두 고르시오.</p><div class="checkchoices"><label><input type="checkbox" name="q4" value="ㄱ">ㄱ. 원점을 출발할 때의 속도는 8이다.</label><label><input type="checkbox" name="q4" value="ㄴ">ㄴ. 움직이는 동안 운동 방향을 두 번 바꾼다.</label><label><input type="checkbox" name="q4" value="ㄷ">ㄷ. t=4/3에서의 가속도는 −2이다.</label></div></article><aside class="card hint-card"><h3>생각 포인트</h3><p>속도는 <b>v(t)=x'(t)</b>, 가속도는 <b>a(t)=x''(t)</b>입니다.</p></aside></div>
+</section>
+
+<section class="page" data-title="문항 5 | 사다리꼴 넓이의 최댓값">
+  <div class="question-layout"><article class="card question-card"><div class="qtag">문항 5 · 교과서 09번 · 단답형</div><h2>곡선 y=9−x²과 x축으로 둘러싸인 부분에 내접하는 사다리꼴의 넓이의 최댓값을 구하시오.</h2><div class="answer-row"><span>정답</span><input id="q5" inputmode="decimal" placeholder="숫자 입력" /></div></article><aside class="card graph-card"><canvas id="q5Canvas" width="430" height="360"></canvas><p class="small center">윗변의 양 끝점을 (−u, 9−u²), (u, 9−u²)로 두어 보세요.</p></aside></div>
+</section>
+
+<section class="page" data-title="문항 6 | 모든 실수에서 성립하는 부등식">
+  <div class="question-layout"><article class="card question-card"><div class="qtag">문항 6 · 교과서 11번 · 단답형</div><h2>모든 실수 x에 대하여</h2><div class="formula">x⁴−4k³x+3 ≥ 0</div><p class="qtext">이 성립하도록 하는 정수 k의 개수를 구하시오.</p><div class="answer-row"><span>정답</span><input id="q6" inputmode="numeric" placeholder="개수 입력" /></div></article><aside class="card hint-card"><h3>생각 포인트</h3><p>주어진 사차식의 <b>최솟값이 0 이상</b>이어야 합니다.</p></aside></div>
+</section>
+
+<section class="page" data-title="문항 7 | 닫힌구간에서 감소하는 조건">
+  <div class="question-layout"><article class="card question-card"><div class="qtag">문항 7 · 교과서 14번 · 서술형 단답</div><h2>함수</h2><div class="formula">f(x)=x³−x²−ax+2</div><p class="qtext">가 닫힌구간 [1,2]에서 감소하도록 하는 실수 a의 값의 범위를 구하시오.</p><div class="answer-row wide"><span>정답</span><input id="q7" placeholder="예: a≥8 또는 [8,∞)" /></div></article><aside class="card hint-card"><h3>생각 포인트</h3><p>[1,2]에서 항상 <b>f'(x)≤0</b>이어야 합니다.</p></aside></div>
+</section>
+
+<section class="page" data-title="문항 8 | 미분을 이용한 부등식">
+  <div class="question-layout"><article class="card question-card"><div class="qtag">문항 8 · 교과서 16번 · 단답형</div><h2>x&gt;1일 때, 2 이상의 자연수 n에 대하여</h2><div class="formula">xⁿ+n(n−3)&gt;nx+1</div><p class="qtext">이 성립하도록 하는 자연수 n의 최솟값을 구하시오.</p><div class="answer-row"><span>정답</span><input id="q8" inputmode="numeric" placeholder="숫자 입력" /></div></article><aside class="card hint-card"><h3>생각 포인트</h3><p>좌변−우변을 하나의 함수로 두고 x&gt;1에서의 <b>증가성</b>을 조사해 보세요.</p></aside></div>
+</section>
+
+<section class="page" data-title="최종 결과 확인">
+  <div class="result-grid final-result-grid">
+    <div class="card score-card"><div class="score-label">최종 결과</div><div id="scoreBig" class="score-big">—</div><div id="correctCount" class="correct-count">채점 중</div><div class="final-note">이 페이지에서만 오답의 정답을 확인할 수 있습니다.</div></div>
+    <div class="card result-card"><h3>틀린 문제 확인</h3><p class="small">틀린 문항만 표시됩니다. 교과서 원래 문항 번호와 정답을 확인하세요.</p><div id="resultList" class="result-list wrong-only"></div></div>
+    <div class="card submit-card"><h3>결과 제출</h3><p id="submitStudent" class="student-confirm"></p><button id="submitBtn" class="primary">Google Sheets로 결과 제출</button><button id="downloadBtn" class="secondary">결과 파일 저장</button><div id="submitStatus" class="status"></div><p class="small">제출되는 자료: 학번, 이름, 맞은 개수, 점수, 문항별 답안과 O/X</p></div>
+  </div>
+</section>
+</main>
+<div class="nav-controls"><span id="navError" class="nav-error"></span><span id="navLabel">표지</span><button id="nextBtn">다음 ▶</button></div>
+</div></div>
+<script src="assets/js/config.js"></script><script src="assets/js/app.js"></script>
+</body></html>
